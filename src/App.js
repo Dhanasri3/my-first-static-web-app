@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Lab1Image from './Lab1.png'; 
 
 function App() {
