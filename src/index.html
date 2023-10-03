@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serving Fonts</title>
+    <style>
+        @font-face {
+            font-family: "Amita";
+            src: url("./Amita/Amita-Regular.ttf");
+            font-display: fallback; /* Use "optional" if you want the font to load asynchronously */
+        }
+
+        body {
+            font-family: "Amita", serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        h2 {
+            color: #28a745;
+            margin-top: 30px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Our Website</h1>
+        <p>
+            This website uses a custom font called "Amita" to style its text content. The font is defined using the
+            <code>@font-face</code> rule in the CSS, which specifies the font source and how it should be displayed.
+            This custom font enhances the visual appeal of the text on our webpages.
+        </p>
+        <p>
+            You can see the custom font in action throughout our website, providing a unique and engaging user
+            experience.
+        </p>
+        <h2>How We Are Serving Fonts</h2>
+        <p>
+            We understand the importance of typography in web design. To ensure a consistent and visually pleasing
+            experience for our visitors, we've chosen a custom font called "Amita". This font is loaded using the
+            <code>@font-face</code> rule in our CSS. When a user accesses our website, their browser fetches the
+            font file from the specified source, which in this case is "./Amita/Amita-Regular.ttf". The
+            <code>font-display: fallback;</code> property ensures that even if the font takes some time to load,
+            there won't be a blank space or a flash of unstyled text. Instead, the browser will display fallback fonts
+            until our custom font is fully loaded and ready to use.
+        </p>
+        <p>
+            By serving fonts in this manner, we prioritize both design aesthetics and user experience. We believe
+            that attention to detail, even in the choice of fonts, contributes to a seamless and enjoyable interaction
+            for everyone who visits our website.
+        </p>
+        <h2>Enhancing User Experience with Custom Fonts</h2>
+        <p>
+            Typography plays a crucial role in creating a pleasant reading experience. Our choice of the "Amita" font
+            reflects our commitment to providing a unique and memorable experience to our visitors. Custom fonts not
+            only enhance the visual appeal but also convey the personality of our brand. The elegant curves and
+            distinct style of Amita add a touch of sophistication to our content, making it more engaging and enjoyable
+            to read.
+        </p>
+        <h2>Optimizing Font Loading for Performance</h2>
+        <p>
+            While custom fonts enhance the aesthetics, we also understand the importance of website performance. We
+            have optimized the loading of the Amita font to ensure a seamless user experience. By specifying the
+            <code>font-display: fallback;</code> property, we strike a balance between design and performance. Our
+            website remains fast and responsive while delivering a visually appealing presentation.
+        </p>
+        <p>
+            We are committed to continuously improving our website, ensuring that it not only looks great but also
+            performs optimally. Our choice of fonts and the way we serve them are just a few examples of the thought
+            and care we put into crafting a superior online experience for our audience.
+        </p>
+    </div>
+</body>
+
+</html>
