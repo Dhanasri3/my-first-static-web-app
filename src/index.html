@@ -1,104 +1,178 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serving Fonts</title>
+    <title>Youth Participatory Action Research</title>
     <style>
-        @font-face {
-            font-family: "Amita";
-            src: url("./Amita/Amita-Regular.ttf");
-            font-display: fallback; /* Use "optional" if you want the font to load asynchronously */
-        }
+/* Apply styles to the entire page */
+ 
+/* Apply styles to the entire page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+}
 
-        body {
-            font-family: "Amita", serif;
-            background-color: #f8f9fa;
-            color: #343a40;
-            margin: 0;
-            padding: 20px;
-        }
+/* Style the header with CSS3 gradient */
+header {
+    background: linear-gradient(45deg, #3498db, #e74c3c);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
 
-        h1 {
-            color: #007bff;
-        }
+/* Style the h1 in the header with text shadow */
+header h1 {
+    font-size: 36px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
 
-        h2 {
-            color: #28a745;
-            margin-top: 30px;
-        }
+/* Style the sections with different background colors */
+section {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+}
 
-        p {
-            line-height: 1.6;
-        }
+/* Style the h2 headings */
+h2 {
+    font-size: 24px;
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
 
-        code {
-            background-color: #f8f9fa;
-            padding: 2px 5px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
+/* Style the paragraphs */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+/* Style the ordered and unordered lists */
+ol, ul {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* Style list items */
+li {
+    margin-bottom: 10px;
+}
+
+/* Style the images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Style the addendum section with a different background color */
+section:last-of-type {
+    background: #f1c40f;
+    color: #333;
+}
+
+/* Style the addendum text with a different background color */
+section:last-of-type h2 {
+    background: #e67e22;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+}
+
+/* Style the anchor tags */
+a {
+    color: #0077cc;
+    text-decoration: underline;
+}
+
+/* Style line breaks */
+br {
+    display: block;
+    margin: 10px 0;
+}
+</style>
 </head>
-
 <body>
-    <div class="container">
-        <h1>Welcome to Our Website</h1>
-        <p>
-            This website uses a custom font called "Amita" to style its text content. The font is defined using the
-            <code>@font-face</code> rule in the CSS, which specifies the font source and how it should be displayed.
-            This custom font enhances the visual appeal of the text on our webpages.
-        </p>
-        <p>
-            You can see the custom font in action throughout our website, providing a unique and engaging user
-            experience.
-        </p>
-        <h2>How We Are Serving Fonts</h2>
-        <p>
-            We understand the importance of typography in web design. To ensure a consistent and visually pleasing
-            experience for our visitors, we've chosen a custom font called "Amita". This font is loaded using the
-            <code>@font-face</code> rule in our CSS. When a user accesses our website, their browser fetches the
-            font file from the specified source, which in this case is "./Amita/Amita-Regular.ttf". The
-            <code>font-display: fallback;</code> property ensures that even if the font takes some time to load,
-            there won't be a blank space or a flash of unstyled text. Instead, the browser will display fallback fonts
-            until our custom font is fully loaded and ready to use.
-        </p>
-        <p>
-            By serving fonts in this manner, we prioritize both design aesthetics and user experience. We believe
-            that attention to detail, even in the choice of fonts, contributes to a seamless and enjoyable interaction
-            for everyone who visits our website.
-        </p>
-        <h2>Enhancing User Experience with Custom Fonts</h2>
-        <p>
-            Typography plays a crucial role in creating a pleasant reading experience. Our choice of the "Amita" font
-            reflects our commitment to providing a unique and memorable experience to our visitors. Custom fonts not
-            only enhance the visual appeal but also convey the personality of our brand. The elegant curves and
-            distinct style of Amita add a touch of sophistication to our content, making it more engaging and enjoyable
-            to read.
-        </p>
-        <h2>Optimizing Font Loading for Performance</h2>
-        <p>
-            While custom fonts enhance the aesthetics, we also understand the importance of website performance. We
-            have optimized the loading of the Amita font to ensure a seamless user experience. By specifying the
-            <code>font-display: fallback;</code> property, we strike a balance between design and performance. Our
-            website remains fast and responsive while delivering a visually appealing presentation.
-        </p>
-        <p>
-            We are committed to continuously improving our website, ensuring that it not only looks great but also
-            performs optimally. Our choice of fonts and the way we serve them are just a few examples of the thought
-            and care we put into crafting a superior online experience for our audience.
-        </p>
-    </div>
-</body>
+    <header>
+        <h1>Youth Participatory Action Research</h1>
+    </header>
 
+    <section>
+        <h2>Context:</h2>
+        <p>The study presented refers to the implementation of a participatory action research (Cammarota & Fine, 2008) program with adolescents and young athletes between 12 and 16 years of age. Based on youth participatory action research methodology (YPAR), this program analyzes each step of involvement of 104 adolescents and young athletes (organized in groups of six to eight elements) in sports and school contexts in the development and implementation of a community intervention project based on sports (Hellison & Martinek, 2009).</p>
+    </section>
+
+    <section>
+        <h2>Two Major Goals:</h2>
+        <ol>
+            <li>To understand if young people, when involved in the research process, can identify, investigate and act upon the social problems that affect their lives, defining actions to respond to these problems.</li>
+            <li>To understand how participation in sporting contexts is associated with developing young athletes as citizens committed to building more inclusive societies when instigated to develop actions in/with the community to which they belong.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Three Phases:</h2>
+        <img src="v1.png"/>
+        <ol>
+            <li>Dissemination of the project and recruitment of young volunteers, organization of work teams and training for the young athletes.</li>
+            <li>Definition of the community profile, construction and implementation of the project considering the problems identified and the community resources.</li>
+            <li>Analysis of the process data, organization of outputs, evaluation and dissemination (to the sports and surrounding community and the scientific community).</li>
+        </ol>
+    </section>
+
+    <div>
+        <h2>1st. Phase: Dissemination of the project and recruitment of young volunteers, organization of work teams and training for the young athletes</h2>
+        <p>Presentation of the Project to teachers. The decision of the school to integrate this initiative in the time dedicated to the "Interdisciplinary Project" aligning with the theme of the school project - Caring today to guarantee Tomorrow. The ODEC team committed to supporting the teachers every 15 days with face-to-face visits. During the visits of the team members, participant observation was carried out with data recording through field notes.</p>
+    </div>
+
+    <div>
+        <h2>2nd Phase: Definition of the community profile, construction and implementation of the project considering the problems identified and the community resources.</h2>
+    </div>
+
+    <div>
+        <h2>3rd Phase: Analysis of the process data, organization of outputs, evaluation and dissemination (to the sports and surrounding community and the scientific community).</h2>
+        <img src="v2.png"/>
+        <p>Results:</p>
+        <ul>
+            <li>The ability of young people to integrate and engage in participatory processes, creating cooperative work dynamics, learning and implementing methodologies to get closer to the communities where they belong.</li>
+            <li>Young people realized how they could get to know their community spaces better and identify their problems.</li>
+            <li>Young people built proposals for activities based on sports as a tool to reduce social inequalities.</li>
+            <li>Organizing a portfolio where young people recorded each stage of the process (from initial expectations to organization and negotiation within the working group and implementation of the proposed actions) allowed a joint analysis of the action research process as true researchers.</li>
+        </ul>
+    </div>
+    <section>
+        <h2>The addendum that I used in this html code are listed below:</h2>
+        <p>
+            &lt;!DOCTYPE html&gt;:This declaration defines the document type and version of HTML being used, which is HTML5 in this case.<br>
+            &lt;html&gt;:This tag is the root element of an HTML document, containing all other HTML elements<br>
+            &lt;head&gt;:The &lt;head&gt; HTML element contains machine-readable information (metadata) about the document, like its title, scripts, and style sheets.<br>
+                &lt;title&gt;:The title global attribute contains text representing advisory information related to the element it belongs to.<br>
+                &lt;body&gt;:  The &lt;body&gt; HTML element represents the content of an HTML document. There can be only one <body> element in a document.<br>
+                    &lt;header&gt;:  The &lt;header&gt;HTML element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.<br>
+                    &lt;section&gt;:The section  HTML element represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. Sections should always have a heading, with very few exceptions.<br>
+                    &lt;heading &gt;:The h1 to h6 HTML elements represent six levels of section headings. h1 is the highest section level and h6 is the lowest. By default, all heading elements create a block-level box in the layout, starting on a new line and taking up the full width available in their containing block.<br>
+&lt;paragraph&gt;:The paragraph HTML element represents a paragraph. Paragraphs are usually represented in visual media as blocks of text separated from adjacent blocks by blank lines and/or first-line indentation, but HTML paragraphs can be any structural grouping of related content, such as images or form fields.<br>
+&lt;ul&gt;:The ul HTML element represents an unordered list of items, typically rendered as a bulleted list.<br>
+&lt;ol&gt;:he  ol HTML element represents an ordered list of items — typically rendered as a numbered list.<br>
+&lt;img src/&gt;:The img HTML element embeds an image into the document<br>
+&lt;a&gt;:<a>: While a  tag is not  present in the above code, the anchor &tag a is typically used to create hyperlinks within the document. It includes an href attribute to specify the URL the link points to.<br>
+    &lt;br&gt;The br HTML element produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant.<br>
+</p>
+    </section>
+</body>
 </html>
