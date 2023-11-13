@@ -3,7 +3,7 @@ const storyStages = {
         text: "You wake up in a mysterious room with a hangman puzzle on the wall. What do you do?",
         choices: ["Inspect the puzzle closely", "Look for an exit"],
         consequence: ["inspectPuzzle", "findExit"],
-        image: "start.jpg"
+        image: "Start.jpg"
     },
     inspectPuzzle: {
         text: "The puzzle seems to be missing a few letters. You notice a clue: 'A place where books are kept.'",
