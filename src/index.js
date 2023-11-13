@@ -21,7 +21,7 @@ const story = {
         text: "A wild monster appears! What do you do?",
         choices: ["Fight the monster", "Run away"],
         consequence: [["fight", "end"], ["run", "end"]],
-        image: "https://media.istockphoto.com/id/1180024648/photo/tentacled-horror-scene-3d-illustration.jpg?s=2048x2048&w=is&k=20&c=movtTKZl5FikVhTeOQQvuwoWR1EqRyFqf4I3uOaAXGo="
+        image: "https://as1.ftcdn.net/v2/jpg/05/88/28/44/1000_F_588284417_PbniVjQbpFAV8QQcoHxIMlMnyQQtMwpd.jpg"
     },
     treasure: {
         text: "Congratulations! You've found hidden treasure.",
