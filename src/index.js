@@ -57,33 +57,39 @@ const storyStages = {
     },
     keepSolving: {
         text: "You continue solving puzzles and discover the secret of the hangman game. You become a puzzle master.",
+        choices: ["Share your knowledge", "Keep the secret to yourself"],
+        consequence: ["shareKnowledge", "keepSecret"],
         image: "keep-solving.jpg"
     },
     findWayOut: {
         text: "You focus on finding a way out and eventually escape the mysterious place.",
         image: "find-way-out.jpg"
     },
-    // ... (Your existing code)
-
-end3: {
-    text: "You uncover a hidden passage leading to a pirate's treasure. Riches beyond imagination await you!",
-    image: "pirate-treasure.jpg"
-},
-
-end4: {
-    text: "A mysterious figure appears and offers you a chance to travel through time. Your adventure continues in different eras!",
-    image: "time-travel.jpg"
-},
-
-end5: {
-    text: "As you explore further, you stumble upon a magical portal. It transports you to a realm of mythical creatures and wonders!",
-    image: "magical-portal.jpg"
-},
-
-// ... (Your existing code)
-
-endGame();
-
+    shareKnowledge: {
+        text: "You share your puzzle-solving knowledge with the world. Everyone admires your skills, and you become a renowned puzzle master.",
+        image: "share-knowledge.jpg",
+        restart: true
+    },
+    keepSecret: {
+        text: "You decide to keep the secret to yourself. You live a quiet life, occasionally solving puzzles for your own amusement.",
+        image: "keep-secret.jpg",
+        restart: true
+    },
+    end3: {
+        text: "You uncover a hidden passage leading to a pirate's treasure. Riches beyond imagination await you!",
+        image: "pirate-treasure.jpg",
+        restart: true
+    },
+    end4: {
+        text: "A mysterious figure appears and offers you a chance to travel through time. Your adventure continues in different eras!",
+        image: "time-travel.jpg",
+        restart: true
+    },
+    end5: {
+        text: "As you explore further, you stumble upon a magical portal. It transports you to a realm of mythical creatures and wonders!",
+        image: "magical-portal.jpg",
+        restart: true
+    }
     // Add more stages and endings as needed
 };
 
@@ -94,8 +100,6 @@ function startGame() {
     currentStage = "start";
     updatePage();
 }
-
-startGame();
 
 // Function to update the page based on the current stage
 function updatePage() {
@@ -117,8 +121,6 @@ function updatePage() {
         document.getElementById("choices").appendChild(button);
     }
 }
-
-// Your existing code...
 
 // Function to end the game
 function endGame() {
@@ -155,4 +157,5 @@ function makeChoice(index) {
     }
 }
 
-// Optional: Enhance game with CSS - Create a styles.css file (styles remain unchanged)
+// Initialize the game when the page loads
+document.addEventListener("DOMContentLoaded", startGame);
