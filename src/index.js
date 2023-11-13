@@ -63,6 +63,27 @@ const storyStages = {
         text: "You focus on finding a way out and eventually escape the mysterious place.",
         image: "find-way-out.jpg"
     },
+    // ... (Your existing code)
+
+end3: {
+    text: "You uncover a hidden passage leading to a pirate's treasure. Riches beyond imagination await you!",
+    image: "pirate-treasure.jpg"
+},
+
+end4: {
+    text: "A mysterious figure appears and offers you a chance to travel through time. Your adventure continues in different eras!",
+    image: "time-travel.jpg"
+},
+
+end5: {
+    text: "As you explore further, you stumble upon a magical portal. It transports you to a realm of mythical creatures and wonders!",
+    image: "magical-portal.jpg"
+},
+
+// ... (Your existing code)
+
+endGame();
+
     // Add more stages and endings as needed
 };
 
@@ -110,6 +131,7 @@ function endGame() {
 }
 
 // Function to handle player choices
+// Function to handle player choices
 function makeChoice(index) {
     const stage = storyStages[currentStage];
     const nextStageKey = stage.consequence[index];
@@ -122,5 +144,6 @@ function makeChoice(index) {
         updatePage();
     }
 }
+
 
 // Optional: Enhance game with CSS - Create a styles.css file (styles remain unchanged)
