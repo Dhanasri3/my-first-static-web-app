@@ -156,6 +156,19 @@ function makeChoice(index) {
         updatePage();
     }
 }
+// Function to close the game
+function closeGame() {
+    // You can perform any cleanup or additional actions before closing the game
+    alert("Game is closing. Goodbye!");
+    // Optionally, you can redirect the user to another page or perform other actions
+    // For now, we'll just reload the current page to reset the game
+    location.reload();
+}
+document.addEventListener("DOMContentLoaded", function () {
+    startGame();
 
+    // Add event listener for the "Close Game" button
+    document.getElementById("close-game").addEventListener("click", closeGame);
+});
 // Initialize the game when the page loads
 document.addEventListener("DOMContentLoaded", startGame);
