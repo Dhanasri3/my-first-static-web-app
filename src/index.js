@@ -1,88 +1,69 @@
 const storyStages = {
     start: {
-        text: "You awaken on a mysterious pirate ship. The captain approaches you with a gleam in their eye.",
-        choices: ["Enlist in the crew", "Attempt a daring escape"],
-        consequence: ["joinCrew", "escapeAttempt"],
-        image: "ship.jpg"
+        text: "You wake up in a mysterious room with a hangman puzzle on the wall. What do you do?",
+        choices: ["Inspect the puzzle closely", "Look for an exit"],
+        consequence: ["inspectPuzzle", "findExit"],
+        image: "start.jpg"
     },
-    joinCrew: {
-        text: "Choosing loyalty, you join the crew. The captain extends a welcoming hand, setting the course for your journey.",
-        choices: ["Explore the ship", "Engage with the crew"],
-        consequence: ["exploreShip", "engageWithCrew"],
-        image: "crew.jpg"
+    inspectPuzzle: {
+        text: "The puzzle seems to be missing a few letters. You notice a clue: 'A place where books are kept.'",
+        choices: ["Guess 'Library'", "Guess 'Kitchen'"],
+        consequence: ["correctLibrary", "incorrectKitchen"],
+        image: "inspect-puzzle.jpg"
     },
-    escapeAttempt: {
-        text: "Opting for freedom, you attempt a daring escape but get caught. The captain's displeasure is evident.",
-        choices: ["Plead for mercy", "Stand your ground and fight"],
-        consequence: ["pleadForMercy", "standAndFight"],
-        image: "caught.jpg"
+    findExit: {
+        text: "You explore the room and find a hidden door. As you open it, a bright light blinds you.",
+        choices: ["Step through the door", "Stay in the room"],
+        consequence: ["escape", "stay"],
+        image: "find-exit.jpg"
     },
-    exploreShip: {
-        text: "While exploring, you stumble upon a treasure map hidden in the captain's quarters.",
-        choices: ["Follow the map's lead", "Share the discovery with the crew"],
-        consequence: ["followMap", "shareWithCrew"],
-        image: "treasure-map.jpg"
+    correctLibrary: {
+        text: "Your guess 'Library' is correct! The door to the next room opens.",
+        choices: ["Continue exploring", "Stay in the library"],
+        consequence: ["continueExploring", "stayInLibrary"],
+        image: "correct-library.jpg"
     },
-    engageWithCrew: {
-        text: "Bonding with the crew, you learn of legendary treasures and are invited to join a thrilling quest.",
-        choices: ["Embark on the quest", "Decline and continue exploring"],
-        consequence: ["embarkOnQuest", "declineQuest"],
-        image: "crew-talking.jpg"
+    incorrectKitchen: {
+        text: "Unfortunately, 'Kitchen' is incorrect. The room begins to shake, and a trapdoor opens beneath you.",
+        choices: ["Accept your fate", "Grab onto something"],
+        consequence: ["acceptFate", "grabSomething"],
+        image: "incorrect-kitchen.jpg"
     },
-    pleadForMercy: {
-        text: "Moved by your plea, the captain shows mercy, and you earn your place as a loyal crew member.",
-        image: "captain-mercy.jpg"
+    escape: {
+        text: "You step through the door and find yourself in a beautiful garden. The hangman puzzle was a test, and you passed!",
+        image: "escape.jpg"
     },
-    standAndFight: {
-        text: "A fierce battle ensues, but you're overpowered and thrown overboard into the vast open sea.",
-        image: "fight.jpg"
+    stay: {
+        text: "You decide to stay in the room. The walls start closing in, and you're trapped forever.",
+        image: "stay.jpg"
     },
-    followMap: {
-        text: "The map leads you to a hidden island adorned with untold riches and ancient mysteries.",
-        image: "hidden-island.jpg"
+    continueExploring: {
+        text: "You find a series of interconnected rooms. Each room presents a new hangman puzzle.",
+        choices: ["Keep solving puzzles", "Try to find a way out"],
+        consequence: ["keepSolving", "findWayOut"],
+        image: "continue-exploring.jpg"
     },
-    shareWithCrew: {
-        text: "The crew is elated by the map and decides to embark on a treasure-hunting escapade.",
-        image: "showing-map.jpg"
+    stayInLibrary: {
+        text: "You decide to stay in the library and read books for the rest of your life.",
+        image: "stay-in-library.jpg"
     },
-    embarkOnQuest: {
-        text: "Accepting the quest, you become the crew's leader. Loyalty and camaraderie define your pirate saga.",
-        image: "quest.jpg"
+    acceptFate: {
+        text: "You accept your fate and fall through the trapdoor. The game ends with a cryptic message.",
+        image: "accept-fate.jpg"
     },
-    declineQuest: {
-        text: "Opting for personal exploration, you decline the quest, continuing to chart your own course.",
-        image: "exploring.jpg"
+    grabSomething: {
+        text: "You grab onto a hanging rope and swing to safety. You find an exit and escape the room.",
+        image: "grab-something.jpg"
     },
-    // ... (Continue adding more stages as needed)
-
-    mythicalCreature: {
-        text: "Encountering a mythical sea creature, you engage in a perilous battle and earn its respect, forming an unbreakable bond.",
-        image: "mythical-creature.jpg"
+    keepSolving: {
+        text: "You continue solving puzzles and discover the secret of the hangman game. You become a puzzle master.",
+        image: "keep-solving.jpg"
     },
-    legendaryPirate: {
-        text: "Crossing paths with a legendary pirate captain, you prove your worth in a duel, forming a legendary pirate duo.",
-        image: "legendary-pirate.jpg"
+    findWayOut: {
+        text: "You focus on finding a way out and eventually escape the mysterious place.",
+        image: "find-way-out.jpg"
     },
-    // ... (Add more stages as needed)
-
-    // Proper Endings
-    endPirateKing: {
-        text: "Congratulations! You rise to become the Pirate King, ruling the high seas with unparalleled prowess.",
-        image: "ending-pirate-king.jpg"
-    },
-    endFountainOfYouth: {
-        text: "Well done! You discover the Fountain of Youth, securing a legendary place in pirate lore.",
-        image: "ending-fountain-of-youth.jpg"
-    },
-    endCursedGold: {
-        text: "You uncover cursed Aztec gold, succumbing to its dark fate. Your pirate adventure ends in tragedy.",
-        image: "ending-cursed-gold.jpg"
-    },
-    endHeroicEscape: {
-        text: "Facing the legendary Kraken, you heroically escape, earning admiration and becoming a pirate hero.",
-        image: "ending-heroic-escape.jpg"
-    },
-    // ... (Add more endings as needed)
+    // Add more stages and endings as needed
 };
 
 let currentStage = "start";
@@ -112,12 +93,6 @@ function updatePage() {
         button.addEventListener("click", () => makeChoice(i));
         document.getElementById("choices").appendChild(button);
     }
-
-    // Add "End Game" button
-    const endGameButton = document.createElement("button");
-    endGameButton.innerText = "End Game";
-    endGameButton.addEventListener("click", closeGame);
-    document.getElementById("choices").appendChild(endGameButton);
 }
 
 // Function to end the game
@@ -130,19 +105,20 @@ function endGame() {
 
     // Remove choices
     document.getElementById("choices").innerHTML = "";
-
-    // Add "End Game" button
-    const endGameButton = document.createElement("button");
-    endGameButton.innerText = "End Game";
-    endGameButton.addEventListener("click", closeGame);
-    document.getElementById("choices").appendChild(endGameButton);
 }
 
-// Function to close the game
-function closeGame() {
-    // You can customize this function to handle any cleanup or closing actions
-    // For now, let's simply reload the page
-    location.reload();
+// Function to handle player choices
+function makeChoice(index) {
+    const stage = storyStages[currentStage];
+    const nextStageKey = stage.consequence[index];
+
+    // Check if the consequence leads to an ending
+    if (nextStageKey.startsWith("end")) {
+        endGame();
+    } else {
+        currentStage = nextStageKey;
+        updatePage();
+    }
 }
 
 // Optional: Enhance game with CSS - Create a styles.css file (styles remain unchanged)
