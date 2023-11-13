@@ -70,14 +70,6 @@ const story = {
 let currentStage;
 let choiceHistory = [];
 
-// Preload images
-const imagePreload = new Image();
-for (const stage in story) {
-    if (story.hasOwnProperty(stage)) {
-        imagePreload.src = story[stage].image;
-    }
-}
-
 function startGame() {
     currentStage = "start";
     choiceHistory = [];
@@ -102,7 +94,7 @@ function updatePage() {
         choicesElement.appendChild(backButton);
     }
 
-    imageElement.src = imagePreload.src;  // Use the preloaded image source
+    imageElement.src = story[currentStage].image;
 }
 
 function createChoiceButton(index) {
@@ -143,8 +135,7 @@ function goBack() {
 
 function getRandomConsequence(consequences) {
     if (consequences && consequences.length > 0) {
-        const randomIndex = Math.floor(Math.random() * consequences.length);
-        return consequences[randomIndex];
+        return consequences[0]; // Use the first consequence instead of random
     }
 }
 
