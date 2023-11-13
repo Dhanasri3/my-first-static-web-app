@@ -3,35 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* Add any additional styles here */
-        body {
-            font-family: 'Arial', sans-serif;
-        }
-        .addendum-button {
-            margin-top: 20px;
-            padding: 10px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .addendum {
-            display: none;
-            margin-top: 20px;
-        }
-    </style>
-    <title>Text Adventure</title>
+    <link rel="stylesheet" href="index.css">
+    <title>Choose Your Adventure</title>
 </head>
 <body>
-    <div id="story"></div>
-    <div id="choices"></div>
-    <img id="story-image" alt="Adventure Image" style="max-width: 100%; height: auto;">
-    <div class="addendum-button" onclick="toggleAddendum()">View Addendum</div>
-    <div id="addendum" class="addendum">
-        <!-- Addendum content will be displayed here -->
-    </div>
-
+    <header>
+        <h1>Choose Your Adventure</h1>
+    </header>
+    <main>
+        <div id="story"></div>
+        <div id="choices"></div>
+        <div id="image-container">
+            <img id="story-image" src="" alt="Story Image">
+        </div>
+        <button id="addendum-button" onclick="toggleAddendum()">View Addendum</button>
+        <div id="addendum" style="display: none;">
+            <!-- Addendum content will be displayed here -->
+        </div>
+    </main>
+    <script src="index.js"></script>
     <script>
-        // Your existing code goes here
+        // Your JavaScript code here
 
         // Addendum content
         const addendumContent = `
@@ -45,6 +37,9 @@
             const addendumElement = document.getElementById("addendum");
             addendumElement.style.display = (addendumElement.style.display === "none") ? "block" : "none";
         }
+
+        // Display addendum content
+        document.getElementById("addendum").innerHTML = addendumContent;
     </script>
 </body>
 </html>
