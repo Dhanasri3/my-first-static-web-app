@@ -158,13 +158,13 @@ const story = {
         text: "In the new world, you encounter wonders beyond imagination, living a life of magic and discovery.",
         choices: [],
         consequence: [],
-        image: "https://cdn.pixabay.com/photo/2020/05/03/11/57/sunset-5114054_1280.jpg"
+        image: "https://img.freepik.com/premium-photo/boy-excited-with-opened-magical-book-with-wave-astral-magical-elements-flowing-out-generative-ai-image-weber_31965-194067.jpg"
     },
     waybackPortalEnding: {
         text: "Following the hidden path back to the portal, you use it to travel between worlds, becoming a guardian of the forest.",
         choices: [],
         consequence: [],
-        image: "https://cdn.pixabay.com/photo/2021/07/07/14/34/fantasy-6395587_1280.jpg"
+        image: "https://static.wikia.nocookie.net/onceuponatime8042/images/2/23/708PortalOpens.png/revision/latest/scale-to-width-down/1200?cb=20181101071506"
     },
     // Additional Endings - Generic
     genericGoodEnding: {
