@@ -52,7 +52,7 @@ const story = {
         text: "You follow the mysterious sound and discover a magical portal. Do you enter or ignore it?",
         choices: ["Enter the portal", "Ignore the portal"],
         consequence: [["portal", "end"], ["ignore", "monster"]],
-        image: "portal.jpg"
+        image: "https://img.freepik.com/premium-photo/galaxy-system-millions-billions-stars_39386-392.jpg?size=626&ext=jpg"
     },
     portal: {
         text: "You step through the portal and find yourself in a different world. What do you do?",
