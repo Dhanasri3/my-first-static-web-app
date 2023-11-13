@@ -186,7 +186,159 @@ const story = {
     consequences: ["startOver"],
     images: ["startOver.jpg"]
   },
+  // Additions to script.js
+
+// ... (previous story stages)
+
+  exploreOnYourOwn: {
+    text: "You decide to explore on your own. Suddenly, you encounter a rickety bridge. What will you do?",
+    choices: ["Cross the bridge cautiously", "Look for an alternative route"],
+    consequences: ["crossBridge", "findAlternativeRoute"],
+    images: ["exploringOnYourOwn.jpg", "ricketyBridge.jpg"]
+  },
+  crossBridge: {
+    text: "You cross the bridge successfully. On the other side, you find a hidden village with the treasure!",
+    choices: ["Celebrate with the villagers", "Examine the treasure"],
+    consequences: ["celebrateWithVillagers", "examineTreasure"],
+    images: ["village.jpg", "treasureInVillage.jpg"]
+  },
+  findAlternativeRoute: {
+    text: "You decide not to risk the rickety bridge. You take a detour and encounter a mystical creature. What's your approach?",
+    choices: ["Befriend the creature", "Proceed with caution"],
+    consequences: ["befriendCreature", "proceedWithCaution"],
+    images: ["alternativeRoute.jpg", "mysticalCreature.jpg"]
+  },
+  followDepictedPath: {
+    text: "You decide to follow the depicted path in the ancient drawings. It leads you to a hidden waterfall.",
+    choices: ["Explore behind the waterfall", "Continue on the path"],
+    consequences: ["exploreBehindWaterfall", "continueOnPath"],
+    images: ["hiddenWaterfallPath.jpg", "waterfallDiscovered.jpg"]
+  },
+  continueOnPath: {
+    text: "The path continues to a vast desert. You spot an oasis in the distance. What will you do?",
+    choices: ["Head towards the oasis", "Continue through the desert"],
+    consequences: ["headToOasis", "continueThroughDesert"],
+    images: ["desertPath.jpg", "oasis.jpg"]
+  },
+  headToOasis: {
+    text: "As you reach the oasis, you encounter a wise desert dweller. They offer guidance. What do you ask about?",
+    choices: ["Ask about the treasure location", "Ask about the next part of the journey"],
+    consequences: ["askAboutTreasure", "askAboutJourney"],
+    images: ["oasisEncounter.jpg", "wiseDesertDweller.jpg"]
+  },
+  continueThroughDesert: {
+    text: "You continue through the desert, facing challenges. Eventually, you find the treasure buried in the sand!",
+    choices: ["Celebrate your discovery", "Examine the treasure"],
+    consequences: ["celebrateDiscovery", "examineTreasure"],
+    images: ["desertJourney.jpg", "treasureInDesert.jpg"]
+  },
+  askAboutTreasure: {
+    text: "The wise desert dweller shares clues about the treasure's location. You gain valuable insights.",
+    choices: ["Thank them and continue", "Ask for more advice"],
+    consequences: ["thankAndContinue", "askForMoreAdvice"],
+    images: ["askingAboutTreasure.jpg", "valuableInsights.jpg"]
+  },
+  askAboutJourney: {
+    text: "You ask about the next part of your journey. The wise desert dweller warns you about a challenging path ahead.",
+    choices: ["Prepare for challenges", "Risk the difficult path"],
+    consequences: ["prepareForChallenges", "riskDifficultPath"],
+    images: ["askingAboutJourney.jpg", "challengingPath.jpg"]
+  },
+  celebrateDiscovery: {
+    text: "You celebrate your discovery in the vast desert. The journey becomes a legend among adventurers.",
+    choices: ["Start a new adventure"],
+    consequences: ["startNewAdventure"],
+    images: ["celebratingDiscovery.jpg", "legendaryJourney.jpg"]
+  },
+  thankAndContinue: {
+    text: "You express gratitude to the wise desert dweller and continue your journey with newfound knowledge.",
+    choices: ["Explore further", "Rest for a while"],
+    consequences: ["exploreFurther", "restForAWhile"],
+    images: ["thankfulToDweller.jpg", "continuingJourney.jpg"]
+  },
+  askForMoreAdvice: {
+    text: "You ask for more advice about the treasure. The wise desert dweller shares a riddle to guide you.",
+    choices: ["Solve the riddle", "Continue without solving"],
+    consequences: ["solveTheRiddle", "continueWithoutSolving"],
+    images: ["askingForMoreAdvice.jpg", "riddle.jpg"]
+  },
+  solveTheRiddle: {
+    text: "You successfully solve the riddle and reach the treasure's location. The wise desert dweller applauds your intellect.",
+    choices: ["Express gratitude", "Continue the journey"],
+    consequences: ["expressGratitude", "continueJourney"],
+    images: ["solvingRiddle.jpg", "applaudingIntellect.jpg"]
+  },
+  continueWithoutSolving: {
+    text: "You choose not to solve the riddle. The journey becomes more challenging, but you press on.",
+    choices: ["Use a light source", "Continue cautiously"],
+    consequences: ["useLightSource", "continueCautiously"],
+    images: ["challengingJourney.jpg", "pressOnThroughChallenge.jpg"]
+  },
+  riskDifficultPath: {
+    text: "You decide to risk the difficult path. The challenges test your skills, but you emerge victorious at the end.",
+    choices: ["Celebrate your triumph", "Examine the treasure"],
+    consequences: ["celebrateTriumph", "examineTreasure"],
+    images: ["difficultPathRisked.jpg", "triumphAtEnd.jpg"]
+  },
+  exploreBehindWaterfall: {
+    text: "You explore behind the waterfall and discover a hidden chamber. The treasure awaits inside!",
+    choices: ["Celebrate your find", "Examine the treasure"],
+    consequences: ["celebrateFind", "examineTreasure"],
+    images: ["behindWaterfall.jpg", "hiddenChamberTreasure.jpg"]
+  },
+  continueOnPath: {
+    text: "You choose to continue on the path. It leads to a beautiful garden with rare flowers. What will you do?",
+    choices: ["Admire the flowers", "Pick a flower"],
+    consequences: ["admireFlowers", "pickAFlower"],
+    images: ["pathContinues.jpg", "beautifulGarden.jpg"]
+  },
+  continueThroughDesert: {
+    text: "You continue through the desert, facing challenges. Eventually, you find the treasure buried in the sand!",
+    choices: ["Celebrate your discovery", "Examine the treasure"],
+    consequences: ["celebrateDiscovery", "examineTreasure"],
+    images: ["desertJourney.jpg", "treasureInDesert.jpg"]
+  },
+  admireFlowers: {
+    text: "You take a moment to admire the rare flowers. Suddenly, a portal opens. What will you do?",
+    choices: ["Enter the portal", "Continue exploring the garden"],
+    consequences: ["enterFlowerPortal", "continueExploringGarden"],
+    images: ["admiringFlowers.jpg", "flowerPortal.jpg"]
+  },
+  pickAFlower: {
+    text: "You pick a flower, and it releases a magical fragrance. The path ahead becomes illuminated.",
+    choices: ["Follow the illuminated path", "Continue without following the path"],
+    consequences: ["followIlluminatedPath", "continueWithoutFollowingPath"],
+    images: ["pickingAFlower.jpg", "illuminatedPath.jpg"]
+  },
+  enterFlowerPortal: {
+    text: "Entering the flower portal transports you to a celestial realm. The treasure awaits in this magical land.",
+    choices: ["Retrieve the treasure", "Explore the celestial realm"],
+    consequences: ["retrieveTreasureInCelestialRealm", "exploreCelestialRealm"],
+    images: ["celestialRealm.jpg", "treasureInCelestialLand.jpg"]
+  },
+  continueExploringGarden: {
+    text: "You continue exploring the beautiful garden. It leads to a hidden cave with the treasure!",
+    choices: ["Celebrate your find", "Examine the treasure"],
+    consequences: ["celebrateFind", "examineTreasure"],
+    images: ["exploringGarden.jpg", "hiddenCaveTreasure.jpg"]
+  },
+  continueJourney: {
+    text: "You continue your journey, eager to explore more adventures.",
+    choices: ["Play again"],
+    consequences: ["startOver"],
+    images: ["continueJourney.jpg"]
+  },
+  startOver: {
+    text: "You decide to start a new adventure. Good luck on your next quest!",
+    choices: ["Play again"],
+    consequences: ["startOver"],
+    images: ["startOver.jpg"]
+  },
 };
+
+// ... (remaining code remains the same)
+
+
 
 let currentStage = "start";
 let currentChoice = 0;
