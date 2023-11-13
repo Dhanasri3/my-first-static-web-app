@@ -164,7 +164,7 @@ const story = {
         text: "Following the hidden path back to the portal, you use it to travel between worlds, becoming a guardian of the forest.",
         choices: [],
         consequence: [],
-        image: "https://static.wikia.nocookie.net/onceuponatime8042/images/2/23/708PortalOpens.png/revision/latest/scale-to-width-down/1200?cb=20181101071506"
+        image: "forest_portal_by_zyrckan_dfaceq1-pre.jpg"
     },
     // Additional Endings - Generic
     genericGoodEnding: {
