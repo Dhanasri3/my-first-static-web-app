@@ -74,6 +74,8 @@ function startGame() {
     updatePage();
 }
 
+startGame();
+
 // Function to update the page based on the current stage
 function updatePage() {
     const stage = storyStages[currentStage];
