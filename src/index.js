@@ -38,11 +38,8 @@ const story = {
     },
     treasure: {
         text: "Congratulations! You've found hidden treasure.",
-        choices: ["Celebrate", "Continue the journey"],
-        consequence: [
-            ["celebrate", "celebrateEnding"],
-            ["continue", "continueJourneyEnding"]
-        ],
+        choices: [],
+        consequence: [],
         image: "https://cdn.pixabay.com/photo/2023/06/13/16/31/ai-generated-8061311_1280.jpg"
     },
     newStage1: {
@@ -101,7 +98,7 @@ const story = {
         text: "You find peace and tranquility in your shelter, living a simple and content life.",
         choices: [],
         consequence: [],
-        image: "https://cdn.pixabay.com/photo/2020/09/09/09/47/nature-5558291_1280.jpg"
+        image: "https://hips.hearstapps.com/hmg-prod/images/peace-quotes-1555094093.jpg"
     },
     ignoreMapEnding: {
         text: "Without the map, you navigate the forest using your instincts. Eventually, you find a hidden treasure.",
@@ -113,19 +110,19 @@ const story = {
         text: "You bravely confront the monster and emerge victorious, earning the respect of the forest creatures.",
         choices: [],
         consequence: [],
-        image: "https://cdn.pixabay.com/photo/2015/11/22/17/37/forest-1052011_1280.jpg"
+        image: "https://www.servicescape.com/img/blog/post/postbg96082.webp"
     },
     runMonsterEnding: {
         text: "You escape from the monster, but the fear haunts you. You decide to leave the forest, ending your adventure.",
         choices: [],
         consequence: [],
-        image: "https://cdn.pixabay.com/photo/2016/01/09/18/27/old-1130731_1280.jpg"
+        image: "https://files.worldwildlife.org/wwfcmsprod/images/Forest_trail_WW_Fall_2020/hero_small/bimueipm1_foresttrail_WWfall2020.jpg"
     },
     solveRiddleEnding: {
         text: "You successfully solve the old man's riddle and gain access to a hidden path leading to a magical realm.",
         choices: [],
         consequence: [],
-        image: "https://cdn.pixabay.com/photo/2019/08/03/15/07/fantasy-4375295_1280.jpg"
+        image: "https://img.freepik.com/premium-photo/realm-enchanted-creatures-is-place-beauty-awe-where-natural-world-magical-realm-intertwine-create-stunning-landscape-generated-by-ai_661108-5741.jpg"
     },
     ignoreOldManEnding: {
         text: "Ignoring the old man's riddle, you continue your journey and stumble upon a treasure hidden in the forest.",
@@ -161,27 +158,33 @@ const story = {
         text: "In the new world, you encounter wonders beyond imagination, living a life of magic and discovery.",
         choices: [],
         consequence: [],
-        image: "https://cdn.pixabay.com/photo/2020/05/03/11/57/sunset-5114054_1280.jpg"
+        image: "https://img.freepik.com/premium-photo/boy-excited-with-opened-magical-book-with-wave-astral-magical-elements-flowing-out-generative-ai-image-weber_31965-194067.jpg"
     },
     waybackPortalEnding: {
         text: "Following the hidden path back to the portal, you use it to travel between worlds, becoming a guardian of the forest.",
         choices: [],
         consequence: [],
-        image: "https://cdn.pixabay.com/photo/2021/07/07/14/34/fantasy-6395587_1280.jpg"
+        image: "forest_portal_by_zyrckan_dfaceq1-pre.jpg"
     },
     // Additional Endings - Generic
-    celebrateEnding: {
-        text: "You celebrate your discovery, throwing a joyful feast in the forest with newfound friends.",
+    genericGoodEnding: {
+        text: "Congratulations! You've successfully navigated the challenges of the forest and discovered the hidden paradise.",
         choices: [],
         consequence: [],
-        image: "https://cdn.pixabay.com/photo/2021/06/25/03/55/sunset-6367242_1280.jpg"
+        image: "https://cdn.pixabay.com/photo/2023/06/13/16/31/ai-generated-8061311_1280.jpg"
     },
-    continueJourneyEnding: {
-        text: "You decide to continue your journey, exploring more mysteries that the forest holds.",
+    genericBadEnding: {
+        text: "Oh no! Your adventure takes a tragic turn. The forest proves to be too perilous, and you meet an unfortunate fate.",
         choices: [],
         consequence: [],
-        image: "https://cdn.pixabay.com/photo/2021/10/06/15/11/landscape-6687380_1280.jpg"
+        image: "https://cdn.pixabay.com/photo/2021/05/13/09/08/sunset-6249731_1280.jpg"
     },
+    genericSecretEnding: {
+        text: "You uncover a hidden path that leads to a magical realm. You become the ruler of this enchanted land, living a life of magic and wonder.",
+        choices: [],
+        consequence: [],
+        image: "https://cdn.pixabay.com/photo/2020/04/23/09/17/woman-5070527_1280.jpg"
+    }
 };
 
 let currentStage;
