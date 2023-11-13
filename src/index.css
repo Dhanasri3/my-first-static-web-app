@@ -1,27 +1,24 @@
 body {
     font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
 header {
     background-color: #333;
     color: #fff;
-    padding: 1em;
     text-align: center;
+    padding: 1em;
 }
 
-#story-container {
+main {
     max-width: 800px;
     margin: 20px auto;
-    padding: 20px;
     background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#story-text {
-    font-size: 18px;
 }
 
 #choices {
@@ -29,14 +26,32 @@ header {
 }
 
 button {
-    font-size: 16px;
     margin: 5px;
     padding: 10px;
     cursor: pointer;
 }
 
-#story-image {
-    max-width: 50%;
-    height: auto;
+#image-container {
     margin-top: 20px;
+}
+
+#story-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+button.back-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button.back-button:hover {
+    background-color: #555;
 }
