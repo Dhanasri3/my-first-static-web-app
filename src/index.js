@@ -98,7 +98,7 @@ const story = {
         text: "You find peace and tranquility in your shelter, living a simple and content life.",
         choices: [],
         consequence: [],
-        image: "https://cdn.pixabay.com/photo/2020/09/09/09/47/nature-5558291_1280.jpg"
+        image: "https://hips.hearstapps.com/hmg-prod/images/peace-quotes-1555094093.jpg"
     },
     ignoreMapEnding: {
         text: "Without the map, you navigate the forest using your instincts. Eventually, you find a hidden treasure.",
@@ -110,19 +110,19 @@ const story = {
         text: "You bravely confront the monster and emerge victorious, earning the respect of the forest creatures.",
         choices: [],
         consequence: [],
-        image: "https://cdn.pixabay.com/photo/2015/11/22/17/37/forest-1052011_1280.jpg"
+        image: "https://www.servicescape.com/img/blog/post/postbg96082.webp"
     },
     runMonsterEnding: {
         text: "You escape from the monster, but the fear haunts you. You decide to leave the forest, ending your adventure.",
         choices: [],
         consequence: [],
-        image: "https://cdn.pixabay.com/photo/2016/01/09/18/27/old-1130731_1280.jpg"
+        image: "https://files.worldwildlife.org/wwfcmsprod/images/Forest_trail_WW_Fall_2020/hero_small/bimueipm1_foresttrail_WWfall2020.jpg"
     },
     solveRiddleEnding: {
         text: "You successfully solve the old man's riddle and gain access to a hidden path leading to a magical realm.",
         choices: [],
         consequence: [],
-        image: "https://cdn.pixabay.com/photo/2019/08/03/15/07/fantasy-4375295_1280.jpg"
+        image: "https://img.freepik.com/premium-photo/realm-enchanted-creatures-is-place-beauty-awe-where-natural-world-magical-realm-intertwine-create-stunning-landscape-generated-by-ai_661108-5741.jpg"
     },
     ignoreOldManEnding: {
         text: "Ignoring the old man's riddle, you continue your journey and stumble upon a treasure hidden in the forest.",
