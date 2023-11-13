@@ -1,19 +1,22 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./index.css"> <!-- Updated path with "./" indicating the current directory -->
-  <title>Choose Your Adventure</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hangman Adventure</title>
 </head>
 <body>
-  <header>
-    <h1>Quest for the Hidden Treasure</h1>
-  </header>
-  <div id="story"></div>
-  <div id="choices"></div>
-  <div id="image"></div>
-  <script type="module" src="./index.js"></script> <!-- Updated path with "./" indicating the current directory -->
+    <header>
+        <h1>Hangman Adventure</h1>
+    </header>
+    <div id="story-container">
+        <p id="story-text">Welcome to Hangman Adventure! You find yourself facing a mysterious word...</p>
+        <div id="choices">
+            <!-- Choices will be dynamically added here -->
+        </div>
+        <img id="story-image" src="" alt="Story Image">
+    </div>
+    <script src="game.js"></script>
 </body>
 </html>
