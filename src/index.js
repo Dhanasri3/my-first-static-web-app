@@ -1,174 +1,161 @@
-const storyStages = {
+const story = {
     start: {
-        text: "You wake up in a mysterious room with a hangman puzzle on the wall. What do you do?",
-        choices: ["Inspect the puzzle closely", "Look for an exit"],
-        consequence: ["inspectPuzzle", "findExit"],
-        image: "Start.jpg"
+        text: "You find yourself in a dark forest. What do you do?",
+        choices: ["Explore the forest", "Build a shelter", "Follow a mysterious sound"],
+        consequence: [["explore", "monster"], ["shelter", "end"], ["mysterious", "end"]],
+        image: "https://images.unsplash.com/photo-1590273466070-40c466b4432d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z3JlZW4lMjBmb3Jlc3R8ZW58MHx8MHx8fDA%3D"
     },
-    inspectPuzzle: {
-        text: "The puzzle seems to be missing a few letters. You notice a clue: 'A place where books are kept.'",
-        choices: ["Guess 'Library'", "Guess 'Kitchen'"],
-        consequence: ["correctLibrary", "incorrectKitchen"],
-        image: "inspect-puzzle.jpg"
+    explore: {
+        text: "As you explore, you find a hidden cave. Enter or keep exploring?",
+        choices: ["Enter the cave", "Continue exploring"],
+        consequence: [["treasure", "end"], ["explore", "monster"]],
+        image: "https://images.pexels.com/photos/163872/italy-cala-gonone-air-sky-163872.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     },
-    findExit: {
-        text: "You explore the room and find a hidden door. As you open it, a bright light blinds you.",
-        choices: ["Step through the door", "Stay in the room"],
-        consequence: ["escape", "stay"],
-        image: "find-exit.jpg"
+    shelter: {
+        text: "You build a shelter and spend the night. The next day, you find a map. What's your next move?",
+        choices: ["Follow the map", "Ignore the map"],
+        consequence: [["treasure", "end"], ["ignore", "end"]],
+        image: "https://images.pexels.com/photos/771308/pexels-photo-771308.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
-    correctLibrary: {
-        text: "Your guess 'Library' is correct! The door to the next room opens.",
-        choices: ["Continue exploring", "Stay in the library"],
-        consequence: ["continueExploring", "stayInLibrary"],
-        image: "correct-library.jpg"
+    monster: {
+        text: "A wild monster appears! What do you do?",
+        choices: ["Fight the monster", "Run away"],
+        consequence: [["fight", "end"], ["run", "end"]],
+        image: "https://media.istockphoto.com/id/1180024648/photo/tentacled-horror-scene-3d-illustration.jpg?s=2048x2048&w=is&k=20&c=movtTKZl5FikVhTeOQQvuwoWR1EqRyFqf4I3uOaAXGo="
     },
-    incorrectKitchen: {
-        text: "Unfortunately, 'Kitchen' is incorrect. The room begins to shake, and a trapdoor opens beneath you.",
-        choices: ["Accept your fate", "Grab onto something"],
-        consequence: ["acceptFate", "grabSomething"],
-        image: "incorrect-kitchen.jpg"
+    treasure: {
+        text: "Congratulations! You've found hidden treasure.",
+        choices: [],
+        consequence: [],
+        image: "https://cdn.pixabay.com/photo/2023/06/13/16/31/ai-generated-8061311_1280.jpg"
     },
-    escape: {
-        text: "You step through the door and find yourself in a beautiful garden. The hangman puzzle was a test, and you passed!",
-        image: "escape.jpg"
+    newStage1: {
+        text: "You encounter a mysterious old man who offers you a riddle. What do you do?",
+        choices: ["Attempt to solve the riddle", "Ignore the old man"],
+        consequence: [["solve", "treasure"], ["ignore", "monster"]],
+        image: "https://example.com/image-url1.jpg"
     },
-    stay: {
-        text: "You decide to stay in the room. The walls start closing in, and you're trapped forever.",
-        image: "stay.jpg"
+    
+    newStage2: {
+        text: "You come across a hidden village in the forest. How do you proceed?",
+        choices: ["Enter the village", "Observe from a distance"],
+        consequence: [["enter", "end"], ["observe", "continue"]],
+        image: "https://example.com/image-url2.jpg"
     },
-    continueExploring: {
-        text: "You find a series of interconnected rooms. Each room presents a new hangman puzzle.",
-        choices: ["Keep solving puzzles", "Try to find a way out"],
-        consequence: ["keepSolving", "findWayOut"],
-        image: "continue-exploring.jpg"
+    end: {
+        text: "Game Over. Try again.",
+        choices: [],
+        consequence: [],
+        image: "https://png.pngtree.com/png-clipart/20210311/original/pngtree-game-over-try-again-vector-design-png-image_6022936.jpg"
     },
-    stayInLibrary: {
-        text: "You decide to stay in the library and read books for the rest of your life.",
-        image: "stay-in-library.jpg"
+    mysterious: {
+        text: "You follow the mysterious sound and discover a magical portal. Do you enter or ignore it?",
+        choices: ["Enter the portal", "Ignore the portal"],
+        consequence: [["portal", "end"], ["ignore", "monster"]],
+        image: "portal.jpg"
     },
-    acceptFate: {
-        text: "You accept your fate and fall through the trapdoor. The game ends with a cryptic message.",
-        image: "accept-fate.jpg"
+    portal: {
+        text: "You step through the portal and find yourself in a different world. What do you do?",
+        choices: ["Explore the new world", "Find a way back"],
+        consequence: [["explore", "monster"], ["wayback", "end"]],
+        image: "new-world.jpg"
     },
-    grabSomething: {
-        text: "You grab onto a hanging rope and swing to safety. You find an exit and escape the room.",
-        image: "grab-something.jpg"
-    },
-    keepSolving: {
-        text: "You continue solving puzzles and discover the secret of the hangman game. You become a puzzle master.",
-        choices: ["Share your knowledge", "Keep the secret to yourself"],
-        consequence: ["shareKnowledge", "keepSecret"],
-        image: "keep-solving.jpg"
-    },
-    findWayOut: {
-        text: "You focus on finding a way out and eventually escape the mysterious place.",
-        image: "find-way-out.jpg"
-    },
-    shareKnowledge: {
-        text: "You share your puzzle-solving knowledge with the world. Everyone admires your skills, and you become a renowned puzzle master.",
-        image: "share-knowledge.jpg",
-        restart: true
-    },
-    keepSecret: {
-        text: "You decide to keep the secret to yourself. You live a quiet life, occasionally solving puzzles for your own amusement.",
-        image: "keep-secret.jpg",
-        restart: true
-    },
-    end3: {
-        text: "You uncover a hidden passage leading to a pirate's treasure. Riches beyond imagination await you!",
-        image: "pirate-treasure.jpg",
-        restart: true
-    },
-    end4: {
-        text: "A mysterious figure appears and offers you a chance to travel through time. Your adventure continues in different eras!",
-        image: "time-travel.jpg",
-        restart: true
-    },
-    end5: {
-        text: "As you explore further, you stumble upon a magical portal. It transports you to a realm of mythical creatures and wonders!",
-        image: "magical-portal.jpg",
-        restart: true
+    wayback: {
+        text: "You search for a way back and discover a hidden path. Where does it lead?",
+        choices: ["Follow the path", "Return to the portal"],
+        consequence: [["treasure", "end"], ["portal", "monster"]],
+        image: "hidden-path.jpg"
     }
-    // Add more stages and endings as needed
 };
+let currentStage;
+let choiceHistory = [];
 
-let currentStage = "start";
-
-// Function to start the game
 function startGame() {
     currentStage = "start";
+    choiceHistory = [];
     updatePage();
 }
 
-// Function to update the page based on the current stage
 function updatePage() {
-    const stage = storyStages[currentStage];
-    document.getElementById("story-text").innerText = stage.text;
+    const storyElement = document.getElementById("story");
+    const choicesElement = document.getElementById("choices");
+    const imageElement = document.getElementById("story-image");
 
-    // Update image
-    document.getElementById("story-image").src = stage.image;
+    storyElement.textContent = story[currentStage].text;
 
-    // Clear previous choices
-    document.getElementById("choices").innerHTML = "";
-
-    // Create buttons for choices
-    for (let i = 0; i < stage.choices.length; i++) {
-        const choice = stage.choices[i];
-        const button = document.createElement("button");
-        button.innerText = choice;
-        button.addEventListener("click", () => makeChoice(i));
-        document.getElementById("choices").appendChild(button);
+    choicesElement.innerHTML = "";
+    for (let i = 0; i < story[currentStage].choices.length; i++) {
+        const choiceButton = createChoiceButton(i);
+        choicesElement.appendChild(choiceButton);
     }
+
+    if (choiceHistory.length > 0) {
+        const backButton = createBackButton();
+        choicesElement.appendChild(backButton);
+    }
+
+    imageElement.src = story[currentStage].image;
 }
 
-// Function to end the game
-function endGame() {
-    const stage = storyStages[currentStage];
-    document.getElementById("story-text").innerText = stage.text;
-
-    // Update image for the ending
-    document.getElementById("story-image").src = stage.image;
-
-    // Remove choices
-    document.getElementById("choices").innerHTML = "";
-
-    // Check if the ending has a restart option
-    if (stage.restart) {
-        // Add a button to restart the game
-        const restartButton = document.createElement("button");
-        restartButton.innerText = "Restart Game";
-        restartButton.addEventListener("click", startGame);
-        document.getElementById("choices").appendChild(restartButton);
-    }
+function createChoiceButton(index) {
+    const choiceButton = document.createElement("button");
+    choiceButton.textContent = story[currentStage].choices[index];
+    choiceButton.addEventListener("click", () => makeChoice(index));
+    return choiceButton;
 }
 
-// Function to handle player choices
+function createBackButton() {
+    const backButton = document.createElement("button");
+    backButton.textContent = "Go back";
+    backButton.classList.add("back-button");
+    backButton.addEventListener("click", goBack);
+    return backButton;
+}
+
 function makeChoice(index) {
-    const stage = storyStages[currentStage];
-    const nextStageKey = stage.consequence[index];
+    choiceHistory.push(currentStage);
 
-    // Check if the consequence leads to an ending
-    if (nextStageKey.startsWith("end")) {
+    const consequences = story[currentStage].consequence[index];
+    const nextStage = getRandomConsequence(consequences);
+    currentStage = nextStage;
+
+    if (nextStage === "end" || nextStage === "treasure") {
         endGame();
     } else {
-        currentStage = nextStageKey;
         updatePage();
     }
 }
-// Function to close the game
-function closeGame() {
-    // You can perform any cleanup or additional actions before closing the game
-    alert("Game is closing. Goodbye!");
-    // Optionally, you can redirect the user to another page or perform other actions
-    // For now, we'll just reload the current page to reset the game
-    location.reload();
-}
-document.addEventListener("DOMContentLoaded", function () {
-    startGame();
 
-    // Add event listener for the "Close Game" button
-    document.getElementById("close-game").addEventListener("click", closeGame);
-});
-// Initialize the game when the page loads
-document.addEventListener("DOMContentLoaded", startGame);
+function goBack() {
+    if (choiceHistory.length > 0) {
+        currentStage = choiceHistory.pop();
+        updatePage();
+    }
+}
+
+function getRandomConsequence(consequences) {
+    const randomIndex = Math.floor(Math.random() * consequences.length);
+    return consequences[randomIndex];
+}
+
+function endGame() {
+    const storyElement = document.getElementById("story");
+    const choicesElement = document.getElementById("choices");
+    const imageElement = document.getElementById("story-image");
+
+    storyElement.textContent = story[currentStage].text;
+    choicesElement.innerHTML = "";
+
+    // Create try again button
+    const tryAgainButton = document.createElement("button");
+    tryAgainButton.textContent = "Try Again";
+    tryAgainButton.addEventListener("click", startGame);
+    choicesElement.appendChild(tryAgainButton);
+
+    imageElement.src = story[currentStage].image;
+
+    // Reset game state
+    currentStage = "start";
+    choiceHistory = [];
+}
+startGame();
