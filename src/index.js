@@ -118,6 +118,8 @@ function updatePage() {
     }
 }
 
+// Your existing code...
+
 // Function to end the game
 function endGame() {
     const stage = storyStages[currentStage];
@@ -128,9 +130,17 @@ function endGame() {
 
     // Remove choices
     document.getElementById("choices").innerHTML = "";
+
+    // Check if the ending has a restart option
+    if (stage.restart) {
+        // Add a button to restart the game
+        const restartButton = document.createElement("button");
+        restartButton.innerText = "Restart Game";
+        restartButton.addEventListener("click", startGame);
+        document.getElementById("choices").appendChild(restartButton);
+    }
 }
 
-// Function to handle player choices
 // Function to handle player choices
 function makeChoice(index) {
     const stage = storyStages[currentStage];
@@ -144,6 +154,5 @@ function makeChoice(index) {
         updatePage();
     }
 }
-
 
 // Optional: Enhance game with CSS - Create a styles.css file (styles remain unchanged)
