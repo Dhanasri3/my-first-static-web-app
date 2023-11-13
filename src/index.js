@@ -35,7 +35,6 @@ const story = {
         consequence: [["solve", "treasure"], ["ignore", "monster"]],
         image: "https://example.com/image-url1.jpg"
     },
-    
     newStage2: {
         text: "You come across a hidden village in the forest. How do you proceed?",
         choices: ["Enter the village", "Observe from a distance"],
@@ -67,8 +66,17 @@ const story = {
         image: "https://render.fineartamerica.com/images/rendered/default/wood-print/10/6.5/break/images/artworkimages/medium/2/the-hidden-path-by-ronnie-mills.jpg"
     }
 };
+
 let currentStage;
 let choiceHistory = [];
+
+// Preload images
+const imagePreload = new Image();
+for (const stage in story) {
+    if (story.hasOwnProperty(stage)) {
+        imagePreload.src = story[stage].image;
+    }
+}
 
 function startGame() {
     currentStage = "start";
@@ -94,7 +102,7 @@ function updatePage() {
         choicesElement.appendChild(backButton);
     }
 
-    imageElement.src = story[currentStage].image;
+    imageElement.src = imagePreload.src;  // Use the preloaded image source
 }
 
 function createChoiceButton(index) {
@@ -134,8 +142,10 @@ function goBack() {
 }
 
 function getRandomConsequence(consequences) {
-    const randomIndex = Math.floor(Math.random() * consequences.length);
-    return consequences[randomIndex];
+    if (consequences && consequences.length > 0) {
+        const randomIndex = Math.floor(Math.random() * consequences.length);
+        return consequences[randomIndex];
+    }
 }
 
 function endGame() {
@@ -158,4 +168,5 @@ function endGame() {
     currentStage = "start";
     choiceHistory = [];
 }
+
 startGame();
