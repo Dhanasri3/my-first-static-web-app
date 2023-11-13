@@ -1,50 +1,50 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Choose Your Adventure</title>
-</head>
-<body>
-    <header>
-        <h1>Choose Your Adventure</h1>
-    </header>
-    <main>
-        <div id="story"></div>
-        <div id="choices"></div>
-        <div id="image-container">
-            <img id="story-image" src="" alt="Story Image">
-        </div>
-    </main>
-    <script src="script.js"></script>
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Choose Your Adventure</title>
+    <style>
+        /* Add any additional styles here */
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .addendum-button {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .addendum {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+    <title>Text Adventure</title>
 </head>
 <body>
-    <header>
-        <h1>Choose Your Adventure</h1>
-    </header>
-    <main>
-        <div id="story"></div>
-        <div id="choices"></div>
-        <div id="image-container">
-            <img id="story-image" src="" alt="Story Image">
-        </div>
-    </main>
-    <script src="index.js"></script>
+    <div id="story"></div>
+    <div id="choices"></div>
+    <img id="story-image" alt="Adventure Image" style="max-width: 100%; height: auto;">
+    <div class="addendum-button" onclick="toggleAddendum()">View Addendum</div>
+    <div id="addendum" class="addendum">
+        <!-- Addendum content will be displayed here -->
+    </div>
+
     <script>
-        // Your JavaScript code here
-        // ...
+        // Your existing code goes here
+
+        // Addendum content
+        const addendumContent = `
+            <h2>Addendum: Describe your process and creative choices</h2>
+            <p>Your description of the process, creative choices, challenges faced, and insights gained.</p>
+            <!-- Add more content as needed -->
+        `;
+
+        // Function to toggle the visibility of the addendum
+        function toggleAddendum() {
+            const addendumElement = document.getElementById("addendum");
+            addendumElement.style.display = (addendumElement.style.display === "none") ? "block" : "none";
+        }
     </script>
 </body>
 </html>
