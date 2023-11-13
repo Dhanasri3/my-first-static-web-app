@@ -58,13 +58,13 @@ const story = {
         text: "You step through the portal and find yourself in a different world. What do you do?",
         choices: ["Explore the new world", "Find a way back"],
         consequence: [["explore", "monster"], ["wayback", "end"]],
-        image: "new-world.jpg"
+        image: "https://media.mmorpg.com/images/heroes/posts/125524.jpg"
     },
     wayback: {
         text: "You search for a way back and discover a hidden path. Where does it lead?",
         choices: ["Follow the path", "Return to the portal"],
         consequence: [["treasure", "end"], ["portal", "monster"]],
-        image: "hidden-path.jpg"
+        image: "https://render.fineartamerica.com/images/rendered/default/wood-print/10/6.5/break/images/artworkimages/medium/2/the-hidden-path-by-ronnie-mills.jpg"
     }
 };
 let currentStage;
