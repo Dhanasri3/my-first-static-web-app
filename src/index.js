@@ -3,7 +3,7 @@ const story = {
         text: "You find yourself in a dark forest. What do you do?",
         choices: ["Explore the forest", "Build a shelter", "Follow a mysterious sound"],
         consequence: [["explore", "monster"], ["shelter", "end"], ["mysterious", "end"]],
-        image: "https://images.unsplash.com/photo-1590273466070-40c466b4432d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z3JlZW4lMjBmb3Jlc3R8ZW58MHx8MHx8fDA%3D"
+        image: "https://images.unsplash.com/photo-1573339607881-208e75e4b267?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZGFyayUyMGZvcmVzdHxlbnwwfHwwfHx8MA%3D%3D"
     },
     explore: {
         text: "As you explore, you find a hidden cave. Enter or keep exploring?",
